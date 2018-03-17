@@ -1,0 +1,252 @@
+/*Font-face-------------------------------------------------*/
+@font-face {
+	font-family: 'RobotoRegular';
+	src: url(../fonts/roboto-regular-webfont.eot),
+		 url(../fonts/roboto-regular-webfont.ttf),
+		 url(../fonts/roboto-regular-webfont.woff);
+}
+
+
+@font-face {
+	font-family: 'RobotoBold';
+	src: url(../fonts/roboto-bold-webfont.eot),
+		 url(../fonts/roboto-bold-webfont.ttf),
+		 url(../fonts/roboto-bold-webfont.woff);
+}
+
+@font-face {
+	font-family: 'RobotoLightItalic';
+	src: url(../fonts/roboto-lightitalic-webfont.eot),
+		 url(../fonts/roboto-lightitalic-webfont.ttf),
+		 url(../fonts/roboto-lightitalic-webfont.woff);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #fff;
+	min-height: 100%;
+	font: 1em/1.5 'RobotoRegular', Arial, sans-serif;
+}
+
+body,
+html {
+	overflow-x: hidden;
+}
+
+header {
+	margin-bottom: 60px;
+	overflow: auto;
+	height: 140px;
+	transition: background-color 2s, height 2s;
+	position: fixed;
+	width: 100%;
+}
+
+
+header img {
+	width: 81px;
+    float: left;
+    margin: 10px 0px 0px 107px;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #000033;
+    height: 37px;
+    overflow: auto;
+    padding: 0px 50px;
+    padding: 14px 50px 0px 50px;
+}
+
+.footer-span {
+	float: left;
+	color: #70DBDB;
+	padding-right: 10px;
+}
+
+
+.first-background {
+
+    /* Full height */
+    height: 100vh; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: radial-gradient(#000033, transparent 219%),
+    #fff url('../img/computer.jpg');
+    text-align: center;
+}
+
+
+
+#first-span {
+	    border: white solid 5px;
+	    font-size: 5em;
+	    padding: 15px 30px 15px 30px;
+	    display: inline-block;
+	    margin: 200px 0px 0px 0px;
+	    font-family: 'RobotoBold';
+}
+
+#second-span {
+	margin-top: 52px;
+    display: block;
+    font-size: 24px;
+    font-family: 'RobotoLightItalic';
+}
+
+.borderslider {
+	background-color: #fff;
+	width: 82px;
+    height: 5px;
+    margin: 30px auto 0px;
+}
+
+#first-button {
+	margin-top: 30px;
+	text-transform: uppercase;
+}
+
+.first-button-style {
+	text-decoration: none;
+	color: #fff;
+	border: #fff solid 1px;
+	font-size: 13px;
+	padding: 12px 45px 12px 45px;
+}
+
+.nav {
+	list-style: none;
+
+ }
+
+.nav-button {
+	text-decoration: none;
+	display: inline;
+	float: right;
+	padding: 0px 45px 0px 0px;
+	margin-top: 24px;
+	color: #fff;
+	font-family: 'RobotoRegular';
+}
+
+.fab {
+	text-decoration: none;
+	color: #fff;
+}
+
+/*Portfolio styles-------------------------------------------*/
+.second-header {
+	background-color: #000033;
+	height: 260px;
+	text-align: center;
+	padding-top: 171px;
+	font-family: 'RobotoLightItalic';
+	color: #70DBDB;
+	font-size: 30px;
+
+
+}
+
+.header {
+	background-color: rgba(0,0,51,.7);
+	height: 110px;
+}
+
+.portfolio-container {
+	text-align: center;
+}
+
+.portfolio-img {
+	width: 90%;
+    margin: 79px 1px;
+    transition: opacity 1s;
+}
+
+.grid {
+	list-style: none;
+	columns: 2;
+  	-webkit-columns: 2;
+  	-moz-columns: 2;
+  	display: inline-block;
+  	padding: 80px 90px;
+}
+
+/*About Me Styles-------------------------------------------*/
+
+
+.about-container {
+	width: 70%;
+	padding: 70px 0px 50px 0px;
+	color: #000033;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.hr-2 {
+	margin: 30px auto;
+	width: 70%;
+	height: 5px;
+	color: #000033;
+	background-color: #000033;
+	border: #000033 solid 2px;
+}
+
+#h1-about {
+
+
+}
+
+#p-about {
+	margin-top: 30px;
+	font-size: 20px;
+	
+}
+
+#span-about {
+	font-size: 25px;
+	font-weight: bold;
+	
+}
+
+
+/*Pseudo Classes---------------------------------------------*/
+
+header:hover {
+	background-color: #000033;
+	height: 100px;
+}
+
+.fab:hover {
+	color: #70DBDB;
+}
+
+footer span:hover {
+	text-decoration: underline;
+}
+
+.nav-button:hover {
+	color: #70DBDB;
+}
+
+.portfolio-img:hover {
+
+}
+
+.portfolio-img:hover {
+	opacity: 0.7;
+}
