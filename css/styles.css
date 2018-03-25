@@ -31,6 +31,10 @@ html {
 	height: 100%;
 }
 
+:root {
+	--base: #000033;
+}
+
 body {
 	margin: 0px;
 	padding: 0px;
@@ -63,7 +67,7 @@ header img {
 footer {
     bottom: 0;
     width: 100%;
-    background-color: #000033;
+    background-color: var(--base);
     height: 37px;
     overflow: auto;
     padding: 0px 50px;
@@ -86,7 +90,7 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background: radial-gradient(#000033, transparent 219%),
+    background: radial-gradient(var(--base), transparent 219%),
     #fff url('../img/computer.jpg');
     text-align: center;
 }
@@ -151,48 +155,98 @@ footer {
 
 /*Portfolio styles-------------------------------------------*/
 .second-header {
-	background-color: #000033;
+	background-color: var(--base);
 	height: 260px;
 	text-align: center;
 	padding-top: 171px;
 	font-family: 'RobotoLightItalic';
 	color: #70DBDB;
 	font-size: 30px;
+	margin-bottom: 48px;
 
 
 }
 
 .header {
-	background-color: rgba(0,0,51,.7);
-	height: 110px;
+	background-color: rgba(0,0,51, 0.8);
+	height: 120px;
+	position: fixed;
+	transition: background-color 1s, height 1s;
+	z-index:1
 }
 
-.portfolio-container {
-	text-align: center;
+
+.row {
+  	display: flex;
+  	flex-wrap: wrap;
+	 width: 90%;
+ 	 margin: 0 auto;
 }
 
-.portfolio-img {
-	width: 90%;
-    margin: 79px 1px;
-    transition: opacity 1s;
+.column {
+	flex: 50%;
+  	max-width: 50%;
+  	padding: 0 24px;
+  	  white-space: nowrap;
 }
 
-.grid {
-	list-style: none;
-	columns: 2;
-  	-webkit-columns: 2;
-  	-moz-columns: 2;
-  	display: inline-block;
-  	padding: 80px 90px;
+
+.img_wrap {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 48px;
+  position: relative;
 }
+
+.img_wrap img {
+  	max-width: 100%;
+}
+
+.img_description_layer {
+  position: absolute;
+  float: left;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(112,219,219, 0.6);
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* transition effect. not necessary */
+  transition: opacity .5s, visibility 1s;
+}
+
+.img_description {
+	 font-family: 'RobotoRegular';
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    background-color: rgba(0,0,51, 1);
+    border-radius: 10px;
+    padding: 6px 12px;
+}
+
+
+
+
 
 /*About Me Styles-------------------------------------------*/
+
+
+#main-about {
+	height: 100vh;
+}
 
 
 .about-container {
 	width: 70%;
 	padding: 70px 0px 50px 0px;
-	color: #000033;
+	color: var(--base);
 	text-align: center;
 	margin: 0 auto;
 }
@@ -201,9 +255,9 @@ footer {
 	margin: 30px auto;
 	width: 70%;
 	height: 5px;
-	color: #000033;
-	background-color: #000033;
-	border: #000033 solid 2px;
+	color: var(--base);
+	background-color: var(--base);
+	border: var(--base) solid 2px;
 }
 
 #h1-about {
@@ -220,18 +274,46 @@ footer {
 #span-about {
 	font-size: 25px;
 	font-weight: bold;
-	
 }
+
+.about-button {
+	font-size: 40px;
+	color: var(--base);
+	padding: 0px 4px 18px;
+}
+
+/*Contact Styles-------------------------------------------*/
+#p-contact {
+	margin-top: 30px;
+	font-size: 20px;
+	padding: 0 300px;
+}
+
+
+
+
 
 
 /*Pseudo Classes---------------------------------------------*/
 
+
 header:hover {
-	background-color: #000033;
+	background-color: var(--base);
 	height: 100px;
 }
 
+.first-button-style:hover {
+		color: #70DBDB;
+		border-color: #70DBDB;
+
+}
+
 .fab:hover {
+	color: #70DBDB;
+}
+
+
+.about-button:hover {
 	color: #70DBDB;
 }
 
@@ -243,10 +325,7 @@ footer span:hover {
 	color: #70DBDB;
 }
 
-.portfolio-img:hover {
-
-}
-
-.portfolio-img:hover {
-	opacity: 0.7;
-}
+.img_description_layer:hover {
+	visibility: visible;
+  	opacity: 1;'   
+  }
